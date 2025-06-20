@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SparkleBites Restaurant</title>
+  <meta name="description" content="SparkleBites Restaurant - Serving delicious food, cozy ambiance, and memorable dining experiences. Book a table today!">
+  <meta property="og:title" content="SparkleBites Restaurant" />
+  <meta property="og:description" content="Delicious meals, cozy ambiance, and great vibes." />
+  <meta property="og:image" content="images/menu1.jpg" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="z-index: 1050;">
+  <div class="container">
+    <a class="navbar-brand logo-text" href="#">
+      <i class="fas fa-utensils me-2"></i> SparkleBites
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reservation">Reservation</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="hero-section text-white d-flex align-items-center justify-content-center pt-navbar">
+  <div class="overlay"></div>
+  <div class="container text-center">
+    <div class="content" data-aos="fade-up">
+      <h1 class="display-4">Welcome to SparkleBites</h1>
+      <p class="lead">Delicious food & cozy vibes</p>
+      <a href="#reservation" class="btn btn-warning btn-lg mt-3">Book a Table</a>
+    </div>
+  </div>
+</header>
+
+  
+  
+
+  <!-- ABOUT SECTION -->
+  <section class="about bg-light" id="about">
+    <div class="container" data-aos="fade-right">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="images/restaurant.jpg" alt="Restaurant" class="img-fluid rounded" loading="lazy"/>
+        </div>
+        <div class="col-md-6">
+          <h2>About Us</h2>
+          <p>
+            At SparkleBites, we bring authentic flavors to your plate. Our chefs use only the freshest ingredients, and our warm, cozy ambiance makes you feel right at home. Whether it’s a casual lunch or a special celebration, we’re here to delight your taste buds.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- MENU SECTION -->
+  <section class="menu p-5 text-center" id="menu">
+    <div class="container" data-aos="zoom-in">
+      <h2 class="mb-4">Our Menu</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/menu1.jpg" class="card-img-top" alt="Dish" loading="lazy" />
+            <div class="card-body">
+              <h5 class="card-title">Grilled Chicken</h5>
+              <p class="card-text">N25000.99</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/menu2.jpg" class="card-img-top" alt="Dish" loading="lazy" />
+            <div class="card-body">
+              <h5 class="card-title">Pasta Delight</h5>
+              <p class="card-text">N17000.99</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="images/menu3.jpg" class="card-img-top" alt="Dish" loading="lazy"/>
+            <div class="card-body">
+              <h5 class="card-title">Veggie Salad</h5>
+              <p class="card-text">N18000.99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="skills p-5 bg-dark text-white text-center" id="skills">
+    <div class="container" data-aos="fade-up">
+      <h2 class="mb-4">My Skills</h2>
+      <div class="d-flex flex-wrap justify-content-center gap-4 fs-5">
+        <span class="badge bg-primary p-3">HTML5</span>
+        <span class="badge bg-success p-3">CSS3</span>
+        <span class="badge bg-warning text-dark p-3">JavaScript</span>
+        <span class="badge bg-info text-dark p-3">React.js</span>
+        <span class="badge bg-secondary p-3">AJAX</span>
+        <span class="badge bg-light text-dark p-3">Bootstrap</span>
+        <span class="badge bg-danger p-3">PHP</span>
+        <span class="badge bg-dark p-3">MySQL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION SECTION -->
+  <section class="p-5 bg-light px-3 px-md-5" id="reservation">
+    <div class="container" data-aos="fade-left">
+      <h2 class="text-center mb-4">Reserve a Table</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form class="row g-3" id="reservationForm">
+            <div class="col-md-6" data-aos="fade-up">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+              <input type="date" class="form-control" id="date" name="date" required>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+              <input type="time" class="form-control" id="time" name="time" required>
+            </div>
+            <div class="col-12" data-aos="fade-up">
+              <textarea class="form-control" rows="4" id="message" name="message" placeholder="Special Request (Optional)"></textarea>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-warning px-5">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-4 px-3">
+    <p>&copy; 2025 SparkleBites. All rights reserved.</p>
+    <p>Design by Tolulope | BlazeTech</p>
+  </footer>
+
+  <!-- JS LIBRARIES -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

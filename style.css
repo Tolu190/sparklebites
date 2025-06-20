@@ -1,0 +1,317 @@
+/* ✅ GLOBAL VARIABLES */
+:root {
+    --primary: #ffb84d;
+    --accent: #ff6f61;
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-light: #fff9f5;
+    --hover-accent: #ffa500;
+  }
+  
+  /* ✅ GLOBAL RESET & BOX SIZING */
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden !important;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* ✅ LOGO STYLING */
+  .logo-text {
+    font-family: 'Lobster', cursive;
+    font-size: 1.8rem;
+    color: var(--primary);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .logo-text i {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    animation: spinLogo 3s linear infinite;
+  }
+  
+  @keyframes spinLogo {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* ✅ HERO SECTION */
+  .hero-section {
+    min-height: 100vh;
+    background-image: url('images/hero1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 60px 15px 100px;
+    transition: background-image 1s ease-in-out;
+  }
+  
+  .hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .hero-section .container {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+  }
+  
+  .hero-section .content {
+    position: relative;
+    z-index: 3;
+  }
+  
+  .hero-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-light);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    animation: zoomRotate 1.3s ease-out forwards;
+  }
+  
+  .hero-section p {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeSlideUp 1.5s ease-in-out 0.8s forwards;
+  }
+  
+  .hero-section h1.animate {
+    animation: zoomRotate 1.3s ease-out forwards;
+  }
+  
+  .hero-section p.animate {
+    animation: fadeSlideUp 1.5s ease-in-out forwards;
+  }
+  
+  /* ✅ ANIMATIONS */
+  @keyframes zoomRotate {
+    0% {
+      opacity: 0;
+      transform: scale(0.6) rotate(-10deg);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
+  @keyframes fadeSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ✅ ABOUT SECTION */
+  .about {
+    padding: 60px 15px;
+  }
+  
+  .about h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+  }
+  
+  /* ✅ MENU SECTION */
+  .menu .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  .menu .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .menu .card img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu .card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .menu .card-body {
+    background-color: #f8f9fa;
+  }
+  
+  .menu .card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  
+  .menu .card-text {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  /* ✅ SKILLS SECTION */
+  .skills .badge {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .skills .badge:hover {
+    transform: scale(1.1);
+  }
+  
+  /* ✅ RESERVATION SECTION */
+  #reservation {
+    background-color: var(--bg-light);
+    padding: 60px 0;
+  }
+  
+  #reservation h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  
+  #reservation form {
+    max-width: 700px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  }
+  
+  #reservation input,
+  #reservation textarea {
+    border-radius: 10px;
+    border: 1px solid var(--primary);
+    padding: 10px 15px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  #reservation input:focus,
+  #reservation textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 5px rgba(255, 184, 77, 0.5);
+    outline: none;
+  }
+  
+  #reservation .btn {
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  #reservation .btn:hover {
+    background-color: var(--hover-accent);
+    color: #fff;
+  }
+  
+  /* ✅ FIXED NAVBAR OFFSET */
+  .pt-navbar {
+    padding-top: 80px;
+  }
+  
+  /* ✅ Z-INDEX FIXES */
+  .navbar-collapse {
+    z-index: 1100 !important;
+    position: relative;
+  }
+  
+  /* ✅ RESPONSIVE FIXES */
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 100px 15px 60px;
+    }
+  
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-section p {
+      font-size: 1.1rem;
+    }
+  
+    .about .row {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  
+    .about .col-md-6 {
+      margin-top: 20px;
+    }
+  
+    .navbar-nav {
+      margin: 0 auto !important;
+      text-align: center;
+    }
+  
+    .navbar-nav .nav-item {
+      margin-bottom: 10px;
+    }
+  
+    .navbar-collapse {
+      padding-bottom: 10px;
+    }
+  }
+  
+  /* ✅ CONTAINER WIDTH SAFEGUARD */
+  .container,
+  .row,
+  .col,
+  .col-md-6,
+  .col-md-4,
+  .col-lg-8,
+  .col-12 {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
